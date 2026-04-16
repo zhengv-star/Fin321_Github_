@@ -25,53 +25,50 @@ Our company, a U.S.-based solar equipment importer, expects to receive €4,500,
 | Variable | Description | Unit | Example | Source |
 |-----------|-------------|------|----------|--------|
 | `FC_AMT` | Foreign-currency receivable | EUR | 1,200,000 | Company data |
-| `S₀` | Current EURUSD spot rate | USD/EUR | [Look up] | Market data |
+| `S₀` | Current EURUSD spot rate | USD/EUR | $1.18 | Market data |
 | `F₀` | 1-year EURUSD forward rate | USD/EUR | 1.0890 | Provided |
-| `r_USD` | USD 1-year interest rate | % | [Look up] | Market data |
-| `r_EUR` | EUR 1-year interest rate | % | [Look up] | Market data |
+| `r_USD` | USD 1-year interest rate | % | 3.68% | Market data |
+| `r_EUR` | EUR 1-year interest rate | % | 4% | Market data |
 | `t` | Time to maturity | Years | 1 | Derived |
-| `K_put` | EUR Put strike | USD/EUR | [Set at spot] | Analyst choice |
-| `K_call` | EUR Call strike | USD/EUR | [Set at spot] | Analyst choice |
+| `K_put` | EUR Put strike | USD/EUR | 1.24 | Analyst choice |
+| `K_call` | EUR Call strike | USD/EUR | 0.02 | Analyst choice |
 | `Premium_put` | Put premium | USD per contract | 0.017 | Scenario |
 | `Premium_call` | Call premium | USD per contract | 0.022 | Scenario |
-
-> *Tip:* Keep labels short and standardized. Think like a financial modeler — these names should become variable names, spreadsheet inputs, or prompt parameters later.
 
 ---
 
 ## 3. Assumptions & Constraints
 
-State all conventions used. Clarity here ensures reproducibility.
-
-Example list:
-- Interest rates are quoted on a simple annual basis.  
-- Forward rate provided represents a 1-year maturity.  
+- The forward rate provided represents a 1-year maturity.  
 - Transaction and credit costs are excluded.  
 - Option premiums are paid upfront in USD.  
-- Exchange rates expressed as USD per EUR.  
-
-> *Write assumptions so another treasury analyst could replicate your results exactly.*
+- Exchange rates expressed as USD per EUR.
+- Interest rates assumed based on market data at the time of search
 
 ---
 
 ## 4. Calculation Flow
 
-Describe the logic and sequencing of your analysis — as if briefing a junior analyst or AI model builder. Focus on **order of operations**, not formulas.
+Step 1: Define Base Parameters
+- Record receivable amount (€4,500,000), time horizon (12 months), spot rate, forward rate (1.0875 USD/EUR), and option terms (strike, premium).
+- Gather USD and EUR interest rates for money-market calculations.
 
-Example flow:
-1. Compute USD proceeds under the forward hedge.  
-2. Recreate a synthetic forward using money market parity to validate rates.  
-3. Compute option hedge outcomes for both the EUR put and EUR call under varying spot outcomes \(S_T\).  
-4. Compare USD results across hedges at the base case and across sensitivity scenarios.  
-5. Summarize the trade-offs (certainty vs. optionality vs. cost).  
+Step 2: Establish Unhedged Baseline
+- Project USD proceeds across multiple future spot rate scenarios.
+- This serves as the benchmark for comparing all hedged strategies.
 
-> *Your goal: anyone reading this section should know exactly how to implement your logic in Excel or code — without you explaining formulas.*
+Step 3: Model Forward Contract Hedge
+- Lock in forward rate for full receivable amount.
+- Calculate fixed USD proceeds (outcome invariant to exchange rate movements).
+
+Step 4: Formulate Recommendation
+- Select strategy aligned with objectives
+- Document alternatives and key limitations.
 
 ---
 
 ## 5. Outputs
 
-List expected results from the model. These become your **spreadsheet outputs**, **AI prompt targets**, and **Stage 5 discussion points**.
 
 | Output | Description | Format | Purpose |
 |---------|--------------|---------|----------|
@@ -82,49 +79,24 @@ List expected results from the model. These become your **spreadsheet outputs**,
 | `Chart_1` | Hedge outcomes vs. S_T | Line chart | Visual comparison |
 | `Summary` | Written conclusion | 1–2 paragraphs | Executive-ready takeaway |
 
-> *Outputs should read like a professional financial dashboard — clear, repeatable, and decision-focused.*
 
 ---
 
 ## 6. Sensitivity Plan
 
-Define how you will test and visualize FX outcomes.
-
-Example:
+> Define Exposure by identifing currency pairs, amounts, and dates (receivables/payables). 
 > Vary EURUSD spot at maturity \(S_T\) from 0.95×S₀ to 1.05×S₀ in increments of 0.01.  
-> For each value, compute USD proceeds under all hedge strategies.  
+> Run Simulations for each value, compute USD proceeds under all hedge strategies.
+> Define Exposure: Identify currency pairs, amounts, and dates (receivables/payables).
 > Present results as a comparison table and line chart.
-
-> *Professional analysts always test sensitivity — it shows how robust their recommendations are.*
 
 ---
 
 ## 7. Limitations & Next Steps
 
-Briefly note any analytical limits (e.g., volatility ignored, credit risk excluded) and outline your immediate next step (e.g., model build in Stage 3).
+- dynamic volatility is excluded.
+- Counterparty default risk on forward and option contracts is excluded.
+- Bid-ask spreads, banking fees, and margin requirements are excluded.
+- All tax implications are excluded.
 
-Example phrasing:
-> This specification does not incorporate implied volatility or transaction costs. The next phase will involve constructing an Excel model implementing this logic to quantify results under each hedge structure.
-
----
-
-# 🧭 Writing a Strong Specification
-
-**Your spec should:**
-- **Communicate like a professional:** clear, structured, and jargon-free.  
-- **Think one stage ahead:** your spec should feed directly into your Excel build or AI prompt.  
-- **Be internally consistent:** variables, labels, and steps must align.  
-- **Be reproducible:** a new analyst should be able to implement your plan without your help.  
-- **Be executive-relevant:** the CFO should understand *what you’re doing* and *why it matters*.
-
----
-
-## 🔗 How This Sets You Up for Later Stages
-
-| Stage | What This Spec Enables |
-|-------|------------------------|
-| **Stage 2** | Each “Input” and “Output” becomes a spreadsheet cell or named range. |
-| **Stage 3** | Your spec documents what you built and articulates an improved design. |
-| **Stage 4** | Your “Calculation Flow” becomes an AI prompt instruction block; your “Outputs” drive the interpretation and recommendation. |
-
-> *Treat your specification as the bridge between business insight and technical execution — the CFO should be confident your plan is sound even before seeing the numbers.*
+- Next Steps are to run scenario simulations and generate comparative outputs for CFO recommendation.
