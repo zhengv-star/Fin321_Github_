@@ -1,4 +1,4 @@
-# [Spec Title] – Technical Specification Template
+# [U.S Solar Equipment Importer] – Technical Specification 
 
 **Created by:** [Victoria Zheng]  
 **Updated by:** [Victoria Zheng]  
