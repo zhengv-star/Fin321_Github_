@@ -1,11 +1,11 @@
 # [Spec Title] – Technical Specification Template
 
-**Created by:** [name]  
-**Updated by:** [name]  
-**Date Created:** [date]  
-**Date Updated:** [date]  
+**Created by:** [Victoria Zheng]  
+**Updated by:** [Victoria Zheng]  
+**Date Created:** [4/15/26]  
+**Date Updated:** [2/15/26]  
 **Version:** [0.0]
-**LLM Used:** [LLM name, or "None"]
+**LLM Used:** [None]
 
 **Role:** Financial Analyst / Treasury Analyst  
 **Audience:** CFO or Director of Treasury  
@@ -16,24 +16,11 @@
 
 ## 1. Problem Statement
 
-Briefly restate the exposure and objective in professional terms.
+Our company, a U.S.-based solar equipment importer, expects to receive €4,500,000 in 12 months, exposing us to transaction exposure from potential EUR/USD exchange rate fluctuations. This specification outlines the analytical framework for quantifying, comparing, and evaluating alternative hedging strategies—including forward contracts, money-market hedges, and currency options—to determine the optimal approach for protecting the USD value of this receivable while balancing cash flow certainty, cost efficiency, and strategic flexibility. The analysis will support a data-driven recommendation to corporate treasury leadership for mitigating downside currency risk.
 
-Example phrasing:
-> Our company expects to receive EUR-denominated revenue in 12 months, exposing us to potential FX risk from fluctuations in the EURUSD rate. This specification outlines the analytical framework for quantifying, comparing, and evaluating alternative hedging strategies to mitigate that risk.
-
-Include:
-- Exposure type (receivable or payable)  
-- Foreign currency amount and time horizon  
-- Objective (e.g., protect USD value, preserve upside)  
-- Decision context (corporate treasury or business unit)
-
-> *A strong statement demonstrates clear understanding of both financial context and business implications.*
-
----
 
 ## 2. Inputs (Known Variables)
 
-Create a clean, professional input table. This will become the foundation for your spreadsheet and future AI prompts.
 
 | Variable | Description | Unit | Example | Source |
 |-----------|-------------|------|----------|--------|
