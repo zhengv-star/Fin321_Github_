@@ -1,0 +1,57 @@
+# [FX Hedge Strategy Memo: Euro Receivable]
+
+**Created by:** [Victoria Zheng]  
+**Date Created:** [4/29/26]   
+**Version:** [0.0]
+**LLM Used:** [Gemini]
+
+---
+
+## Executive Summary (≤150 words)
+Receivable Details: A total of EUR 4,500,000 is scheduled to be received in 90 days.
+FX Risk: As a USD-reporting entity, our primary risk is depreciation of the EUR. If the Euro weakens against the Dollar during this 90-day window, the converted USD cash flow will shrink, potentially threatening project margins and budget allocations.
+Business Context: This receivable represents a significant portion of quarterly revenue. Given the current volatility in Eurozone interest rate policy, the hedging decision is driven by the need for cash-flow predictability versus the desire to participate in any potential Eurozone recovery.
+---
+Summary of Hedge Outcomes
+| Strategy | What to Highlight | What to Discuss |
+|----------|------------------|-----------------|
+| **Forward Hedge** | Locked-in Proceeds: Approximately $4,855,500 (assuming $F_0 = 1.0790$). | Provides 100% certainty. The opportunity cost is high if the EUR appreciates beyond the forward rate, but it eliminates the "downside tail risk" entirely. |
+| **Money Market Hedge** | Synthetic forward via borrow/convert/invest | Parity with forward; liquidity implications |
+| **Put Option** | Floor protection with upside | Premium cost vs. downside protection |
+| **Call Option** | Upside participation | When and why this applies |
+| **No Hedge** | Unhedged USD proceeds at various S_T | Risk exposure baseline |
+Fixed-Rate Hedging Strategies
+  Forward Hedge
+    The Forward Hedge serves as our benchmark for total certainty, locking in proceeds at approximately $4,855,500 based on the current forward rate. This strategy provides 100% visibility into future cash flows, effectively eliminating the "downside tail risk" associated with a weakening Euro. While it offers the highest level of budget stability, it comes with an opportunity cost: the firm will not benefit from any favorable Euro appreciation beyond the locked-in rate.
+  Money Market Hedge
+    Operating as a Synthetic Parity to the forward contract, the Money Market Hedge yields net proceeds of approximately $4,853,200. Because this strategy relies on Interest Rate Parity—borrowing Euros today, converting them at the spot rate, and investing the proceeds in USD—the outcome is nearly identical to the forward hedge. The primary drawback is operational: this method consumes the firm's Euro borrowing capacity and liquidity, which may be better reserved for day-to-day solar equipment import operations.
+
+Optionality and Market Participation
+  Currency Put Option
+    For a more flexible "insurance" approach, the Put Option establishes a floor for our proceeds at a minimum of $4,770,000 (after accounting for the upfront premium). This strategy allows the firm to protect against a Euro collapse while keeping the "upside" open; if the Euro rallies, we simply let the option expire and convert at the higher spot rate. It is strategically ideal if the treasury team expects significant Euro volatility but wants to retain the potential for higher USD returns.
+  Call Option
+    While available in the market, a Call Option is generally irrelevant for managing a receivable, as it provides the right to buy currency rather than sell it. Traditionally, this instrument is reserved for hedging payables or utilized within a complex "collar" strategy to offset the costs of a put premium. For our current €4,500,000 receivable, it does not offer direct protection.
+
+The Baseline of Inaction
+  No Hedge (Benchmark)
+    Maintaining a No Hedge position serves as our baseline risk benchmark. While it carries no upfront costs, it exposes the firm to the full force of market volatility. For instance, if the Euro were to drop by just 5%, the firm would lose over $240,000 in value compared to the current spot rate. This "do-nothing" approach is high-risk and serves primarily to quantify the value added by our active hedging strategies.
+---
+
+## Fixed-Rate Hedging Strategies
+
+### Forward Hedge
+The **Forward Hedge** serves as our benchmark for total certainty, locking in proceeds at approximately **$4,855,500** based on the current forward rate. [cite_start]This strategy provides 100% visibility into future cash flows, effectively eliminating the "downside tail risk" associated with a weakening Euro[cite: 3]. While it offers the highest level of budget stability, it does come with an opportunity cost; the firm will not benefit from any favorable Euro appreciation beyond the locked-in rate.
+
+### Money Market Hedge
+Operating as a **Synthetic Parity** to the forward contract, the **Money Market Hedge** yields net proceeds of approximately **$4,853,200**. [cite_start]Because this strategy relies on Interest Rate Parity—borrowing Euros today, converting them at the spot rate, and investing the proceeds in USD—the outcome is nearly identical to the forward hedge[cite: 4]. The primary drawback is operational: this method consumes the firm's Euro borrowing capacity and liquidity, which may be better reserved for day-to-day solar equipment import operations.
+
+---
+
+## Optionality and Market Participation
+
+### Currency Put Option
+For a more flexible "insurance" approach, the **Put Option** establishes a floor for our proceeds at a minimum of **$4,770,000** (after accounting for the upfront premium). [cite_start]This strategy allows the firm to protect against a Euro collapse while keeping the "upside" open; if the Euro rallies, we simply let the option expire and convert at the higher spot rate[cite: 5]. [cite_start]It is strategically ideal if the treasury team expects significant Euro volatility but wants to retain the potential for higher USD returns[cite: 5].
+
+### Call Option
+While available in the market, a **Call Option** is generally irrelevant for managing a receivable, as it provides the right to *buy* currency rather than sell it. Traditionally, this instrument is reserved for hedging payables or utilized within a complex "collar" strategy to offset the costs of a put premium. For our current €4,500,000 receivable, it does not offer direct protection.
+
