@@ -16,42 +16,46 @@ Summary of Hedge Outcomes
 | Strategy | What to Highlight | What to Discuss |
 |----------|------------------|-----------------|
 | **Forward Hedge** | Locked-in Proceeds: Approximately $4,855,500 (assuming $F_0 = 1.0790$). | Provides 100% certainty. The opportunity cost is high if the EUR appreciates beyond the forward rate, but it eliminates the "downside tail risk" entirely. |
-| **Money Market Hedge** | Synthetic forward via borrow/convert/invest | Parity with forward; liquidity implications |
-| **Put Option** | Floor protection with upside | Premium cost vs. downside protection |
-| **Call Option** | Upside participation | When and why this applies |
-| **No Hedge** | Unhedged USD proceeds at various S_T | Risk exposure baseline |
-Fixed-Rate Hedging Strategies
-  Forward Hedge
-    The Forward Hedge serves as our benchmark for total certainty, locking in proceeds at approximately $4,855,500 based on the current forward rate. This strategy provides 100% visibility into future cash flows, effectively eliminating the "downside tail risk" associated with a weakening Euro. While it offers the highest level of budget stability, it comes with an opportunity cost: the firm will not benefit from any favorable Euro appreciation beyond the locked-in rate.
-  Money Market Hedge
-    Operating as a Synthetic Parity to the forward contract, the Money Market Hedge yields net proceeds of approximately $4,853,200. Because this strategy relies on Interest Rate Parity—borrowing Euros today, converting them at the spot rate, and investing the proceeds in USD—the outcome is nearly identical to the forward hedge. The primary drawback is operational: this method consumes the firm's Euro borrowing capacity and liquidity, which may be better reserved for day-to-day solar equipment import operations.
-
-Optionality and Market Participation
-  Currency Put Option
-    For a more flexible "insurance" approach, the Put Option establishes a floor for our proceeds at a minimum of $4,770,000 (after accounting for the upfront premium). This strategy allows the firm to protect against a Euro collapse while keeping the "upside" open; if the Euro rallies, we simply let the option expire and convert at the higher spot rate. It is strategically ideal if the treasury team expects significant Euro volatility but wants to retain the potential for higher USD returns.
-  Call Option
-    While available in the market, a Call Option is generally irrelevant for managing a receivable, as it provides the right to buy currency rather than sell it. Traditionally, this instrument is reserved for hedging payables or utilized within a complex "collar" strategy to offset the costs of a put premium. For our current €4,500,000 receivable, it does not offer direct protection.
-
-The Baseline of Inaction
-  No Hedge (Benchmark)
-    Maintaining a No Hedge position serves as our baseline risk benchmark. While it carries no upfront costs, it exposes the firm to the full force of market volatility. For instance, if the Euro were to drop by just 5%, the firm would lose over $240,000 in value compared to the current spot rate. This "do-nothing" approach is high-risk and serves primarily to quantify the value added by our active hedging strategies.
+| **Money Market Hedge** | Synthetic Parity: Net proceeds of $4,853,200. | Nearly identical to the Forward due to Interest Rate Parity. However, this utilizes liquidity (borrowing capacity in EUR), which may be better reserved for operations.|
+| **Put Option** | Floor Protection: Minimum proceeds of $4,770,000 (less premium).| Acts as an insurance policy. We pay a premium upfront to ensure we never receive less than the strike price, while keeping the "upside" open if the EUR rallies.|
+| **Call Option** | Upside Participation: Not traditionally used for receivables. | This would only be used if we were hedging a payable. For a receivable, a call is irrelevant unless used in a complex "collar" to offset put costs.|
+| **No Hedge** | Baseline Risk: Potential for high reward or severe loss. | If the EUR drops 5%, we lose over $240,000 in value compared to the spot rate. This is the "do-nothing" risk benchmark. |
 ---
 
-## Fixed-Rate Hedging Strategies
+### C. Sensitivity Interpretation
 
-### Forward Hedge
-The **Forward Hedge** serves as our benchmark for total certainty, locking in proceeds at approximately **$4,855,500** based on the current forward rate. [cite_start]This strategy provides 100% visibility into future cash flows, effectively eliminating the "downside tail risk" associated with a weakening Euro[cite: 3]. While it offers the highest level of budget stability, it does come with an opportunity cost; the firm will not benefit from any favorable Euro appreciation beyond the locked-in rate.
+Our Stage 2 model demonstrates a clear "divergence of outcomes" based on a ±5% EUR movement:
+EUR Depreciation (-5%): In a "bear" scenario, the Forward and Money Market hedges are the clear winners, outperforming an unhedged position by roughly $225,000. The Put Option successfully triggers its floor, protecting the firm from the worst-case scenario.
+EUR Appreciation (+5%): If the EUR strengthens, the Forward hedge becomes a "regret" position, as we are locked into the lower rate. The Put Option shines here; we let the option expire worthless and sell EUR at the higher market spot rate, capturing the gain (minus the initial premium).
+---
+### D. Strategic Recommendation
 
-### Money Market Hedge
-Operating as a **Synthetic Parity** to the forward contract, the **Money Market Hedge** yields net proceeds of approximately **$4,853,200**. [cite_start]Because this strategy relies on Interest Rate Parity—borrowing Euros today, converting them at the spot rate, and investing the proceeds in USD—the outcome is nearly identical to the forward hedge[cite: 4]. The primary drawback is operational: this method consumes the firm's Euro borrowing capacity and liquidity, which may be better reserved for day-to-day solar equipment import operations.
+Recommendation: Put Option Hedge (Strike at $1.0750$)
+Based on the current volatility and the firm’s healthy liquidity position, I recommend the Put Option. While the Forward offers absolute certainty, the Put Option provides a strategic balance: it ensures we meet our minimum budget requirements (the floor) while allowing the firm to benefit if the Euro outperforms current market expectations.
 
 ---
+### E. Executive Justification
 
-## Optionality and Market Participation
+Cash Flow Stability: The Put Option establishes a "worst-case" USD inflow, allowing Treasury to forecast minimum cash availability with high confidence.
+Optionality Value: Unlike a Forward, which is an obligation, the Put is a right. We are essentially buying "downside insurance" while staying in the game for "upside wins."
+Premium Cost: The premium is a known, fixed cost that can be expensed or capitalized as part of the transaction cost, making it easier to manage than an unknown FX loss.
+Budget Certainty: The strike price is set above our "break-even" project rate, ensuring the contract remains profitable regardless of market swings.
 
-### Currency Put Option
-For a more flexible "insurance" approach, the **Put Option** establishes a floor for our proceeds at a minimum of **$4,770,000** (after accounting for the upfront premium). [cite_start]This strategy allows the firm to protect against a Euro collapse while keeping the "upside" open; if the Euro rallies, we simply let the option expire and convert at the higher spot rate[cite: 5]. [cite_start]It is strategically ideal if the treasury team expects significant Euro volatility but wants to retain the potential for higher USD returns[cite: 5].
-
-### Call Option
-While available in the market, a **Call Option** is generally irrelevant for managing a receivable, as it provides the right to *buy* currency rather than sell it. Traditionally, this instrument is reserved for hedging payables or utilized within a complex "collar" strategy to offset the costs of a put premium. For our current €4,500,000 receivable, it does not offer direct protection.
-
+---
+### F. Structured AI Prompt (Required Component)
+Create a professional memo that compares Forward, Money Market, and Option strategies for a Euro receivable. Use the files to collect the needed information to fulfill these requirements. The memo must include the FX hedge analysis mentioned in the spec document. A recommendation recommending the best strategy must be made based on data in the Excel sheet and the other Word documents. 
+Understand that the goal is to analyze the data given to you to determine what is being asked. Please do with the input document format.
+The input variables are to be used to create an Excel model resembling the one given to you. The goals of the new Excel model are to showcase the hedging options and the possible profits or losses associated with pursuing them. Keep the document formatted exactly as the one provided to allow for easy reading. 
+# INPUT VARIABLES
+Use the following values to initialize the model. Create a dedicated "Inputs" tab or section.
+FC_AMT: 4,500,000 (EUR)
+S0_in (Spot): 1.0850 (USD/EUR)
+F0_in (Forward): 1.0790 (USD/EUR)
+R_USD (US Rate): 0.0520 (5.2%)
+R_FC (EUR Rate): 0.0360 (3.6%)
+T_DAYS (Tenor): 90
+K_PUT (Put Strike): 1.0750
+PREM_PUT: 0.0120 (per unit)
+K_CALL: 1.0950
+PREM_CALL: 0.0100 (per unit)
+---
